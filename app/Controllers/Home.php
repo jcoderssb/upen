@@ -17,6 +17,7 @@ class Home extends BaseController
 		
 		return view('dashboard.php');
 	}
+	//huruf
 	public function J()
 	{
 		return view('jcoders/J.html');
