@@ -21,7 +21,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="/home" class="h1" style="hover: #32d200;"><b>Admin</b>DCS</a>
+      <a href="/home" class="h1" style="hover: #32d200;"><b>Admin</b>JCODERS</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
