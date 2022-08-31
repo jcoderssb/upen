@@ -25,7 +25,7 @@ class App extends BaseConfig
 	 */
 	//public $baseURL = 'http://localhost/';
 	//public $baseURL = 'http://dcodes.test:8080/';
-	public $baseURL = 'http://dcodes.test/';
+	public $baseURL = 'http://localhost:8082/';
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -306,7 +306,7 @@ class App extends BaseConfig
 	 * (empty string) means no SameSite attribute will be set on cookies. If
 	 * set to `None`, `$cookieSecure` must also be set.
 	 *
-       * @var string 'Lax'|'None'|'Strict'
+	 * @var string 'Lax'|'None'|'Strict'
 	 */
 	public $cookieSameSite = 'Lax';
 
