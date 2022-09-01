@@ -7,14 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-		
+		 
         <link rel="stylesheet" href="<?php echo baseURL?>/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo baseURL?>/css/hero-slider.css">
-        <link rel="stylesheet" href="<?php echo baseURL?>/css/templatemo-main.css?r=12">
+		
+        <!--link rel="stylesheet" href="<?php// echo baseURL?>/css/templatemo-main.css?r=12"-->
+		<link rel="stylesheet" type="text/css" href="<?php echo baseURL?>/css/templatemo-main.css?=' . filemtime('<?php echo baseURL?>/css/templatemo-main.css')" />
+
         <link rel="stylesheet" href="<?php echo baseURL?>/css/owl-carousel.css">
         <link rel="stylesheet" href="<?php echo baseURL?>/css/fontAwesome.css">
 		
-        <link rel="stylesheet" href="<?php echo baseURL?>/css/dcodes.css?r=1">
+        <!--link rel="stylesheet" href="<?php echo baseURL?>/css/dcodes.css?r=1"-->
+		<link rel="stylesheet" type="text/css" href="<?php echo baseURL?>/css/dcodes.css?=' . filemtime('<?php echo baseURL?>/css/dcodes.css')" />
 		
 		<!-- Fonts -->
 		<link rel="stylesheet" type="text/css" href="font/dosis-regular/font.css">
@@ -41,7 +45,8 @@
 
 		.navbar .nav-link:hover,
 		.navbar .nav-link:focus {
-			color: #58D3F7;
+			<!-- color: #58D3F7; -->
+			color: #e4a115;
 			
 			/* shadowDarkBlue */
 			text-shadow: 1px 0px 1px rgba(11,76,95,1), 
@@ -59,14 +64,16 @@
 
 		/* Change navbar styling on scroll */
 		.navbar.active {
-			color: #58D3F7;
+			<!-- color: #58D3F7; -->
+			color: #e4a115;
 			
 			background: rgba(255, 255, 255, 0.9);
 			box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 		}
 
 		.navbar.active .nav-link {
-			color: #58D3F7; /* 555 */
+			/*color: #58D3F7; */
+			color: #e4a115; 
 			
 			/* shadowDarkBlue */
 			text-shadow: 1px 0px 1px rgba(11,76,95,1), 
@@ -109,15 +116,19 @@ https://templatemo.com/tm-526-vanilla
   
   <!--header class="header"-->
     <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold dcodes-font"><label class="dcs-blue dcs-shadowDarkBlue">J</label>CODERS</a>
+        <div class="container">
+			<a href="#" class="navbar-brand text-uppercase font-weight-bold dcodes-font">
+				<img style="width:10%" src="<?php echo baseURL?>/img/perumahan/jata_negara.png" alt="">&nbsp
+				<img style="width:5%" src="<?php echo baseURL?>/img/perumahan/logoN9.png" alt="">
+			</a>
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
             
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="#home" class="nav-link text-uppercase font-weight-bold"><i class="fas fa-home"></i><span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link text-uppercase font-weight-bold">About</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link text-uppercase font-weight-bold">Partners</a></li>
-                    <li class="nav-item"><a href="#contact-us" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link text-uppercase font-weight-bold">|&nbsp;Permohonan</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link text-uppercase font-weight-bold">|&nbsp;Rekabentuk</a></li>
+                    <li class="nav-item"><a href="#contact-us" class="nav-link text-uppercase font-weight-bold">|&nbsp;Hubungi&nbsp;Kami</a></li>
                     <li class="nav-item"><a href="/login" class="nav-link text-uppercase font-weight-bold"><i class="fas fa-sign-in-alt"></i></a></li>
                 </ul>
             </div>
@@ -135,20 +146,10 @@ https://templatemo.com/tm-526-vanilla
                 </div>
             </div-->
 			
-			<div class="dcs-topDiv" style>
-	            <div class="dcs-letterSpacing dcs-shadowBlackTimes dcs-title" style="font-size: 14pt; color: white;">
-					
-					<span style="font-size:20pt; " class="dcodes-font">JCODERS SDN BHD</span>
-					<!--(DC<span class="dcs-green">S</span>) -->
-					
-					<br/><br/>
-					System & Application Developer
-					<br/><br/>
-					Knowledge &#8226; 
-					Experience &#8226; 
-					Reliable 
-					<!--img src="image/dcs-awesome.png" style="width:30%; max-width:1000px;" alt="..."-->
-	            </div>
+			<br/><br/><br/><br/>
+			<div class="dcs-topDiv" >
+				<strong><span class="dcs-letterSpacing dcs-shadowBlackTimes dcs-title" style="color: white; 
+    font-size: 35pt; FONT-WEIGHT: 800;">SISTEM PERUMAHAN <br>NEGERI SEMBILAN</span></strong>
 			</div>  
         </div>
     </div>
@@ -267,89 +268,53 @@ https://templatemo.com/tm-526-vanilla
     </div>
 
 
-   <!-- <div class="tabs-content" id="our-story">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <div class="wrapper">
-                    <section id="first-tab-group" class="tabgroup">
-                      <div id="tab1">
-                        <img src="img/1st-tab.jpg" alt="">
-                        <p>Please do not re-distribute our template ZIP file on your template collection sites. You can make a screenshot and a link back to our website. This template can be used for personal or commercial purposes by end-users.</p>
-                      </div>
-                      <div id="tab2">
-                        <img src="img/2nd-tab.jpg" alt="">
-                        <p>Aliquam eu ultrices risus, sed condimentum diam. Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique dui tempor venenatis.</p>
-                      </div>
-                      <div id="tab3">
-                        <img src="img/3rd-tab.jpg" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ligula est, at venenatis ex iaculis quis. Morbi sollicitudin nulla eget odio pellentesque, sed cursus diam iaculis.</p>
-                      </div>
-                      <div id="tab4">
-                        <img src="img/4th-tab.jpg" alt="">
-                        <p>Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.</p>
-                      </div>
-                    </section>
-                    <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                      <li><a href="#tab1" class="active">2008 - 2014</a></li>
-                      <li><a href="#tab2">2014 - 2016</a></li>
-                      <li><a href="#tab3">2016 - 2019</a></li>
-                      <li><a href="#tab4">2019 - Now</a></li>
-                    </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
-
     <div class="parallax-content contact-content" id="contact-us">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="contact-form">
                         <div class="row">
-                            <!--div class="col-md-12">
-							  <fieldset>
-							   <img style="size:2px; margin-bottom:5%;" src="<?php echo baseURL?>/img/dcslogo.png" alt="">
-							  </fieldset>
-							</div-->
-							<!--div class ="" style="background-color:rgba(0, 0, 0, 0.8); margin-bottom: 10px; padding: 15px 20px;">
-								<div class="left-text">
-									<h4>Contact Details</h4>
-									<div class="line-dec"></div>
-								</div>
-							</div-->
 								<div class="col-md-12 left-text">
-									<h4>Contact Details</h4>
+									<h4>Hubungi Kami</h4>
 									<div class="line-dec"></div>
 								</div>
+								
 								<div class="col-md-12">
-								  <fieldset>
 									<i class="fas fa-map-marker-alt dcs-blue"></i>
-									<p class="contact"> JCODERS SDN BHD<br/> NO 3, TINGKAT 1,<br/> PUSAT KOMERSIAL DELIMA, <br/>TAMAN INDAH, 73000 TAMPIN<br/>NEGERI SEMBILAN, MALAYSIA</p>
-									<br/>
-								  </fieldset>
 								</div>
 								<div class="col-md-12">
 								  <fieldset>
+									<p class="contact"> PEJABAT SETIAUSAHA KERAJAAN NEGERI SEMBILAN <br/> TINGKAT 5, BLOK A, WISMA NEGERI, <br/> JALAN DATO' ABDUL MALEK, <br/>70503 SEREMBAN, NEGERI SEMBILAN,  <br/>MALAYSIA</p>
+									<br/>
+								  </fieldset>
+								</div>
+
+								<div class="col-md-12">
 									<i class="fas fa-phone dcs-blue"></i>
-									<p class="contact">+6019 202 6249</p>
-									<br/>
-								  </fieldset>
 								</div>
 								<div class="col-md-12">
-								  <fieldset>
-									<i class="fas fa-envelope dcs-blue"></i>
-									<p class="contact">support@jcoders.com.my</p>
-									<br/>
-								  </fieldset>
+									<p class="contact">606-765 9900</p>
 								</div>
+								
+								<div class="col-md-12">
+									<i class="fas fa-fax dcs-blue"></i>
+								</div>
+								<div class="col-md-12">
+									<p class="contact">606-761 7386</p>
+								</div>
+								
+								<div class="col-md-12">
+									<i class="fas fa-envelope dcs-blue"></i>
+								</div>
+								<div class="col-md-12">
+									<p class="contact">korporatsukns[at]ns.gov.my</p>
+								</div>
+								
+								<br><br>
 								 <div class="col-md-12">
 								  <fieldset>
 									<p class="contact dcs-blue" style="font-weight:600; text-align:justify;">
-									Please feel free to contact us for any inquiries.
-									You can reach us by phone, email or visit our office</p>
+									Sila hubungi kami untuk sebarang pertanyaan. Anda boleh menghubungi kami melalui telefon, e-mel atau melawat pejabat kami.</p>
 								  </fieldset>
 								</div>
                         </div>
@@ -359,7 +324,7 @@ https://templatemo.com/tm-526-vanilla
                 <div class="col-md-8" >
 					
                     <div class="map left-text">
-						<h4>Location</h4>
+						<h4>Peta Lokasi</h4>
 						<div class="line-dec"></div>
 						
 						<!-- How to change your own map point
@@ -368,8 +333,7 @@ https://templatemo.com/tm-526-vanilla
 							   3. Click "Share" and choose "Embed map" tab
 							   4. Copy only URL and paste it within the src="" field below
 						-->
-
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.0878219754413!2d102.23516211475574!3d2.4778689981943756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31ce03b0372db04b%3A0x15a93d738a8d5ad!2sDynamic%20Code%20Solutions!5e0!3m2!1sen!2smy!4v1625960448501!5m2!1sen!2smy" width="100%" height="390" frameborder="0" style="border:0" loading="lazy" allowfullscreen></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.3040782693665!2d101.93986631457511!3d2.725802898014232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cddd84e940e80d%3A0xb9aa427d3683f89e!2sNegeri%20Sembilan%20State%20Secretary%E2%80%99s%20Office!5e0!3m2!1sen!2smy!4v1662018526917!5m2!1sen!2smy" width="100%" height="390" frameborder="0" style="border:0" loading="lazy" allowfullscreen></iframe>
 						
 					</div>
                 </div>
@@ -383,7 +347,7 @@ https://templatemo.com/tm-526-vanilla
             <div class="row">
                 <div class="col-md-12">
                     <div class="primary-button">
-                        <a href="#home">Back To Top</a>
+                        <a href="#home">Kembali</a>
                     </div>
                     
                     <p> &copy; 2021 All Right Reserved -

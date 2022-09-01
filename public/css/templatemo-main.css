@@ -128,7 +128,8 @@ a:hover { color: #FF0; }
 
 .primary-button a {
   display: inline-block;
-  background-color: #58D3F7;
+  /* background-color: #58D3F7; */
+  background-color: #e4a115;
   padding: 15px 24px;
   border-radius: 3px;
   text-transform: uppercase;
@@ -150,8 +151,9 @@ a:hover { color: #FF0; }
 .baner-content {
   padding-top: 30vh;
   text-align: center;
-  /*background-image: url(../img/1st-section.jpg);*/
-  background-image: url(../img/dcs-bg2.jpg);
+  /*background-image: url(../img/1st-section.jpg);
+  background-image: url(../img/dcs-bg2.jpg);*/
+  background-image: url(../img/perumahan/11.png);
 }
 
 .baner-content h1 {
@@ -164,7 +166,8 @@ a:hover { color: #FF0; }
 }
 
 .baner-content em {
-  color: #58D3F7;
+  /* color: #58D3F7; */
+  color: #e4a115;
   font-weight: 600;
   font-style: normal;
 }
@@ -188,7 +191,7 @@ a:hover { color: #FF0; }
   padding-right: 15px;
   padding-top: 15vh;
   /*background-image: url(../img/dcs-keyboard.jpg);*/
-  background-image: url(../img/books.jpg);
+  background-image: url(../img/perumahan/14.png);
   background-color: #696969;
   background-attachment: fixed;
   min-height: 100vh;
@@ -209,7 +212,8 @@ h4, .h4 {
 .service-content .left-text .line-dec {
   width: 45px;
   height: 3px;
-  background-color: #58D3F7;
+  /* background-color: #58D3F7; */
+  background-color: #e4a115;
   margin: 20px 0px 20px 0px;
 }
 
@@ -246,7 +250,8 @@ h4, .h4 {
 .service-content .service-item .line-dec {
   width: 45px;
   height: 3px;
-  background-color: #58D3F7;
+  /* background-color: #58D3F7; */
+  background-color: #e4a115;
   margin: 20px auto 15px auto;
 }
 
@@ -254,7 +259,7 @@ h4, .h4 {
 
 .projects-content {
   padding-top: 20vh;
-  background-image: url(../img/pc.jpg); /* keyboardblur.jpg pc.jpg cpu.jpg*/
+  background-color: white;
 }
 
 .projects-content .item img {
@@ -281,7 +286,8 @@ h4, .h4 {
   font-style: normal;
   font-size: 17px;
   font-weight: 700;
-  color: #58D3F7;
+  /* color: #58D3F7; */
+  color: #e4a115;
 }
 
 .owl-pagination {
@@ -349,11 +355,13 @@ section {
 }
 
 .tabs a:hover {
-  color: #58D3F7;
+  /* color: #58D3F7; */
+  color: #e4a115;
 }
 
 .tabs .active {
-  border:4px solid #58D3F7;
+  /* border:4px solid #58D3F7; */
+  border:4px solid #e4a115;
 }
 
 .tabgroup div  {
@@ -386,7 +394,8 @@ h4, .h4 {
 .contact-content .left-text .line-dec {
   width: 45px;
   height: 3px;
-  background-color: #58D3F7;
+  /* background-color: #58D3F7; */
+  background-color: #e4a115;
   margin: 20px 0px 20px 0px;
 }
 /*end of add*/
@@ -394,7 +403,7 @@ h4, .h4 {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 16vh;
-  background-image: url(../img/laptop.jpg);
+  background-image: url(../img/perumahan/6.png);
 }
 
 .contact-form {
@@ -437,7 +446,8 @@ h4, .h4 {
 
 #contact button {
   display: inline-block;
-  background-color: #58D3F7;
+  /* background-color: #58D3F7; */
+  background-color: #e4a115;
   padding: 15px 24px;
   width: 100%;
   border-radius: 3px;
@@ -486,7 +496,8 @@ footer ul li a {
   line-height: 40px;
   text-align: center;
   display: inline-block;
-  background-color: #58D3F7;
+  /* background-color: #58D3F7; */
+  background-color: #e4a115;
   color: #282b2f;
   border-radius: 50%;
   text-decoration: none;
@@ -509,7 +520,8 @@ footer p {
 }
 
 footer em {
-  color: #58D3F7;
+  /* color: #58D3F7; */
+  color: #e4a115;
   font-weight: 600;
   font-style: normal;
 }
@@ -543,7 +555,8 @@ footer em {
   .service-content .left-text .line-dec {
     width: 45px;
     height: 3px;
-    background-color: #58D3F7;
+    /* background-color: #58D3F7; */
+    background-color: #e4a115;
     margin: 20px auto 20px auto;
   }
 

@@ -77,7 +77,8 @@
 }
 
 .dcs-blue {
-	color:#58D3F7;
+	/*color:#58D3F7;*/
+	color:#e4a115;
 }
 
 /* 
@@ -114,8 +115,10 @@ default color: 00c7d8, replaced with: 32d200
 }
 
 .dcs-btn:hover {
-	color: #58D3F7;	
-	border: 2px solid #58D3F7;
+	/* color: #58D3F7;	
+	border: 2px solid #58D3F7; */
+	color: #e4a115;	
+	border: 2px solid #e4a115;
 	cursor: pointer;
 	text-decoration: none;
 }
