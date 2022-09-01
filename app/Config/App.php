@@ -25,7 +25,7 @@ class App extends BaseConfig
 	 */
 	//public $baseURL = 'http://localhost/';
 	//public $baseURL = 'http://dcodes.test:8080/';
-	public $baseURL = 'http://localhost:8082/';
+	public $baseURL = 'http://upen.test:8000/';
 
 	/**
 	 * --------------------------------------------------------------------------

@@ -7,12 +7,16 @@
     <title>UPEN</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
-    <link rel="stylesheet" href="adminlte/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <link rel="stylesheet" href="adminlte/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= base_url('adminlte/plugins/fontawesome-free/css/all.min.css') ?>"">
+    <link rel=" stylesheet" href="<?= base_url('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') ?>"">
+    <link rel=" stylesheet" href="<?= base_url('adminlte/dist/css/adminlte.min.css') ?>"">
+
+    <!-- DataTables -->
+    <link rel=" stylesheet" href="<?= base_url('adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') ?>">
 </head>
 
-<body class="dark-mode sidebar-mini layout-fixed layout-navbar-fixed" style="height: auto;">
+<body class="sidebar-mini layout-fixed layout-navbar-fixed" style="height: auto;">
     <div class="wrapper">
 
         <?= $this->include('components/preloader') ?>
@@ -43,17 +47,17 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <section class="card card-primary">
+                            <section class="card">
                                 <header class="card-header">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h3 class="card-title">
                                             Senarai Permohonan
                                         </h3>
                                         <div>
-                                            <button class="btn btn-sm btn-success">
+                                            <a href="<?= base_url('permohonan/daftar') ?>" class="btn btn-sm btn-success">
                                                 <i class="fas fa-plus"></i>
                                                 Daftar
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </header>
@@ -75,7 +79,7 @@
                                                         <td>column2 rows<?= $key ?></td>
                                                         <td>column3 rows<?= $key ?></td>
                                                         <td class="d-flex justify-content-center">
-                                                            <a class="btn btn-primary btn-sm" href="<?= url_to('permohonan_show', 1) ?>">
+                                                            <a class="btn btn-primary btn-sm" href="<?= base_url('permohonan/show/1') ?>">
                                                                 <i class="fas fa-folder"></i>
                                                                 Lihat
                                                             </a>
