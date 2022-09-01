@@ -259,7 +259,7 @@ h4, .h4 {
 
 .projects-content {
   padding-top: 20vh;
-  background-color: white;
+  background-color: #372c2e;
 }
 
 .projects-content .item img {
@@ -471,7 +471,7 @@ h4, .h4 {
 
 footer {
   text-align: center;
-  background-color: #282b2f;
+  background-color: #372c2e;
   padding: 70px 0px;
 }
 
@@ -498,7 +498,7 @@ footer ul li a {
   display: inline-block;
   /* background-color: #58D3F7; */
   background-color: #e4a115;
-  color: #282b2f;
+  color: #372c2e;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.5s;
@@ -506,7 +506,7 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-  color: #282b2f;
+  color: #372c2e;
   background-color: #ff8e43;
 }
 
