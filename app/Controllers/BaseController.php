@@ -7,6 +7,9 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+use App\Models\PermohonanModel;
+use App\Models\TanggunganModel;
+
 /**
  * Class BaseController
  *
@@ -27,7 +30,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [];
+	protected $helpers = ['date', 'url', 'session'];
 
 	/**
 	 * Constructor.
@@ -41,11 +44,15 @@ class BaseController extends Controller
 		// Do Not Edit This Line
 		parent::initController($request, $response, $logger);
 
+		date_default_timezone_set('Asia/Kuala_Lumpur');
+
 		//--------------------------------------------------------------------
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.: $this->session = \Config\Services::session();
+
+		$this->permohonanModel = new PermohonanModel();
+		$this->tanggunganModel = new TanggunganModel();
+		$this->session = \Config\Services::session();
 	}
-	
-	
 }

@@ -36,7 +36,7 @@
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="<?= base_url('permohonan') ?>">Permohonan</a></li>
-                                <li class="breadcrumb-item active">20220901P001</li>
+                                <li class="breadcrumb-item active"><?= $permohonan['id'] ?></li>
                             </ol>
                         </div>
                     </div>
@@ -60,23 +60,23 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <strong>Nama Penuh</strong>
-                                        <p class="text-muted">Mohd Kmarul Bin Ali Hazim</p>
+                                        <p class="text-muted"><?= $permohonan['nama_pemohon'] ?></p>
                                     </div>
                                     <div class="form-group">
                                         <strong>No. Kad Pengenalan</strong>
-                                        <p class="text-muted">891129011234</p>
+                                        <p class="text-muted"><?= $permohonan['nokp_pemohon'] ?></p>
                                     </div>
                                     <div class="form-group">
                                         <strong>Taraf Perkahwinan</strong>
-                                        <p class="text-muted">Berkahwinan</p>
+                                        <p class="text-muted"><?= $permohonan['taraf_perkahwinan'] ?></p>
                                     </div>
                                     <div class="form-group">
                                         <strong>Pekerjaan</strong>
-                                        <p class="text-muted">Mekanik</p>
+                                        <p class="text-muted"><?= $permohonan['pekerjaan_pemohon'] ?></p>
                                     </div>
                                     <div class="form-group">
                                         <strong>Pendapatan Bulanan</strong>
-                                        <p class="text-muted">RM 1,500.00</p>
+                                        <p class="text-muted">RM <?= $permohonan['pendapatan_pemohon'] ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -97,19 +97,19 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <strong>Nama Penuh</strong>
-                                        <p class="text-muted">Siti Sarah Binti Mohd Badrul</p>
+                                        <p class="text-muted"><?= (empty($permohonan['nama_pasangan'])) ? '-' : $permohonan['nama_pasangan'] ?></p>
                                     </div>
                                     <div class="form-group">
                                         <strong>No. Kad Pengenalan</strong>
-                                        <p class="text-muted">Lorem ipsum dolor sit amet.</p>
+                                        <p class="text-muted"><?= (empty($permohonan['nokp_pasangan'])) ? '-' : $permohonan['nokp_pasangan'] ?></p>
                                     </div>
                                     <div class="form-group">
                                         <strong>Pekerjaan</strong>
-                                        <p class="text-muted">Lorem ipsum dolor sit amet.</p>
+                                        <p class="text-muted"><?= (empty($permohonan['pekerjaan_pasangan'])) ? '-' : $permohonan['pekerjaan_pasangan']?></p>
                                     </div>
                                     <div class="form-group">
                                         <strong>Pendapatan Bulanan</strong>
-                                        <p class="text-muted">RM 1,500.00</p>
+                                        <p class="text-muted"><?= (empty($permohonan['pendapatan_pasangan'])) ? '-' : 'RM ' . $permohonan['pendapatan_pasangan'] ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -131,19 +131,19 @@
                                             <tr>
                                                 <th data-orderable="false" data-searchable="false">Bil</th>
                                                 <th>Nama penuh</th>
-                                                <th>No. KP @ Sijil Kelahiran</th>
+                                                <th>No. KP/Sijil Kelahiran</th>
                                                 <th>Umur</th>
                                                 <th>Hubungan Dengan Pemohon</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach (array(1) as $item => $key) : ?>
+                                            <?php foreach ($senaraiTanggungan as $tanggungan) : ?>
                                                 <tr>
                                                     <td></td>
-                                                    <td>Haikal Syahri Bin Mohd Kamarul</td>
-                                                    <td>050505012222</td>
-                                                    <td>12</td>
-                                                    <td>Anak Kandung</td>
+                                                    <td><?= $tanggungan['nama'] ?></td>
+                                                    <td><?= $tanggungan['nokp'] ?></td>
+                                                    <td><?= $tanggungan['umur'] ?></td>
+                                                    <td><?= $tanggungan['hubungan'] ?></td>
                                                 </tr>
                                             <?php endforeach ?>
 

@@ -35,6 +35,7 @@ $routes->get('/', 'Home::index');
 
 // permohonan modul
 $routes->get('permohonan', 'Permohonan::index', ['as' => 'permohonan_index']);
+$routes->post('permohonan', 'Permohonan::save', ['as' => 'permohonan_save']);
 $routes->get('permohonan/daftar', 'Permohonan::create', ['as' => 'permohonan_create']);
 $routes->get('permohonan/(:any)', 'Permohonan::show/$1', ['as' => 'permohonan_show']);
 

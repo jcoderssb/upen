@@ -94,5 +94,9 @@
                 <i class="fas fa-expand-arrows-alt"></i>
             </a>
         </li>
+
+        <li class="nav-item d-flex align-items-center">
+            <button type="button" class="btn btn-sm btn-secondary">Log Keluar</button>
+        </li>
     </ul>
 </nav>

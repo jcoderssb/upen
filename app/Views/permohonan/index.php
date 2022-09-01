@@ -14,6 +14,9 @@
     <!-- DataTables -->
     <link rel=" stylesheet" href="<?= base_url('adminlte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') ?>">
+
+    <!-- toastr -->
+    <link rel="stylesheet" href="<?= base_url('adminlte/plugins/toastr/toastr.min.css') ?>">
 </head>
 
 <body class="sidebar-mini layout-fixed layout-navbar-fixed" style="height: auto;">
@@ -67,26 +70,33 @@
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Jawatan</th>
-                                                    <th>Vot</th>
+                                                    <th>No. KP</th>
+                                                    <th>Nama Pemohon</th>
+                                                    <th>Status Permohonan</th>
+                                                    <th>Dihantar Pada</th>
                                                     <th data-orderable="false" data-searchable="false"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach (array(1, 2, 3) as $item => $key) : ?>
+                                                <?php foreach ($senaraiPermohonan as $permohonan) : ?>
                                                     <tr>
-                                                        <td>column1 rows<?= $key ?></td>
-                                                        <td>column2 rows<?= $key ?></td>
-                                                        <td>column3 rows<?= $key ?></td>
+                                                        <td><?= $permohonan['id'] ?></td>
+                                                        <td><?= $permohonan['nokp_pemohon'] ?></td>
+                                                        <td><?= $permohonan['nama_pemohon'] ?></td>
+                                                        <td>
+                                                            <?php if ($permohonan['status'] == 1) : ?>
+                                                                <span class="badge badge-warning">Sedang Diproses</span>
+                                                            <?php endif ?>
+                                                        </td>
+                                                        <td><?= date('d/m/Y', $permohonan['created_at']) ?></td>
                                                         <td class="d-flex justify-content-center">
-                                                            <a class="btn btn-primary btn-sm" href="<?= base_url('permohonan/show/1') ?>">
+                                                            <a class="btn btn-primary btn-sm" href="<?= base_url('permohonan/' . $permohonan['id']) ?>">
                                                                 <i class="fas fa-folder"></i>
                                                                 Lihat
                                                             </a>
                                                         </td>
                                                     </tr>
                                                 <?php endforeach ?>
-
                                             </tbody>
                                         </table>
                                     </div>
@@ -101,15 +111,40 @@
         <?= $this->include('components/footer') ?>
     </div>
 
-    <script src="adminlte/plugins/jquery/jquery.min.js"></script>
-    <script src="adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="adminlte/dist/js/adminlte.min.js"></script>
+    <!-- adminlte -->
+    <script src="<?= base_url('adminlte/plugins/jquery/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('adminlte/dist/js/adminlte.min.js') ?>"></script>
 
     <!-- datatables -->
-    <script src="adminlte/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="<?= base_url('adminlte/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?= base_url('adminlte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
+    <script src="<?= base_url('adminlte/plugins/datatables-responsive/js/dataTables.responsive.min.js') ?>"></script>
+    <script src="<?= base_url('adminlte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') ?>"></script>
+
+    <!-- toastr -->
+    <script src="<?= base_url('adminlte/plugins/toastr/toastr.min.js') ?>"></script>
+
+    <script>
+        let table = $("#table").DataTable({
+            "paging": true,
+            "pageLength": 20,
+            "lengthChange": false,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+            "order": [
+                [0, 'desc']
+            ]
+        });
+
+        <?php if(session()->getFlashdata('success')):?>
+        toastr.success("<?= session()->getFlashdata('success') ?>")
+        <?php unset($_SESSION['success']); ?>
+        <?php endif ?>
+    </script>
 </body>
 
 </html>
