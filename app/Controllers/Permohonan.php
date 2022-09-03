@@ -2,11 +2,9 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
-
 class Permohonan extends BaseController
 {
-  public function index()
+    public function index()
     {
         $senaraiPermohonan = $this->permohonanModel->findAll();
 
@@ -21,7 +19,7 @@ class Permohonan extends BaseController
     public function show($id)
     {
         $permohonan = $this->permohonanModel->find($id);
-        $senaraiTanggungan = $this->tanggunganModel->findAll($permohonan['id']);
+        $senaraiTanggungan = $this->tanggunganModel->where('id_permohonan', $permohonan['id'])->findAll();
 
         return view('permohonan/show', compact('permohonan', 'senaraiTanggungan'));
     }
@@ -36,7 +34,7 @@ class Permohonan extends BaseController
 
     public function save()
     {
-        $this->permohonanModel->insert([
+        $id_permohonan = $this->permohonanModel->insert([
             'nokp_pemohon' => $this->request->getPost('nokp_pemohon'),
             'nama_pemohon' => $this->request->getPost('nama_pemohon'),
             'taraf_perkahwinan' => $this->request->getPost('taraf_perkahwinan'),
@@ -48,6 +46,17 @@ class Permohonan extends BaseController
             'pekerjaan_pasangan' => $this->request->getPost('pekerjaan_pasangan'),
             'pendapatan_pasangan' => $this->request->getPost('pendapatan_pasangan')
         ]);
+
+        if ($this->request->getPost('total_tanggungan') != null) {
+            for ($i = 0; $i < (int) $this->request->getPost('total_tanggungan'); $i++) {
+                $this->tanggunganModel->insert([
+                    'id_permohonan' => $id_permohonan,
+                    'nama' => $this->request->getPost('nama_tanggungan' .  $i),
+                    'nokp' => $this->request->getPost('nokp_tanggungan' . $i),
+                    'hubungan' => $this->request->getPost('hubungan_tanggungan' . $i),
+                ]);
+            }
+        }
 
         session()->setFlashdata('success', 'Permohonan berjaya dihantar!');
         return redirect()->to('/permohonan');
