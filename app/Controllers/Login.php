@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Controllers;
 
@@ -11,7 +11,7 @@ class Login extends Controller
     {
         helper(['form']);
         echo view('login');
-    } 
+    }
 
     public function auth()
     {
@@ -20,11 +20,11 @@ class Login extends Controller
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $data = $model->where('email', $email)->first();
-        if($data){
+        if ($data) {
             $pass = $data['password'];
-			
-           // $verify_pass = password_verify($pass, $password);
-            if($password == $pass){
+
+            // $verify_pass = password_verify($pass, $password);
+            if ($password == $pass) {
                 $ses_data = [
                     'id'       => $data['id'],
                     'username'     => $data['username'],
@@ -33,11 +33,11 @@ class Login extends Controller
                 ];
                 $session->set($ses_data);
                 return redirect()->to('/task');
-            }else{
-                $session->setFlashdata('msg','Password Incorrect');
+            } else {
+                $session->setFlashdata('msg', 'Password Incorrect');
                 return redirect()->to('/login');
             }
-        }else{
+        } else {
             $session->setFlashdata('msg', 'Email not Found');
             return redirect()->to('/login');
         }
@@ -49,9 +49,9 @@ class Login extends Controller
         $session->destroy();
         return redirect()->to('/login');
     }
-	
-	public function home()
-	{
-		return view('index1.html');
-	}
-} 
+
+    public function home()
+    {
+        return view('index1.html');
+    }
+}

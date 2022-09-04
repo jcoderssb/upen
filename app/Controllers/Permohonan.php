@@ -24,14 +24,6 @@ class Permohonan extends BaseController
         return view('permohonan/show', compact('permohonan', 'senaraiTanggungan'));
     }
 
-    public function edit()
-    {
-    }
-
-    public function update()
-    {
-    }
-
     public function save()
     {
         $id_permohonan = $this->permohonanModel->insert([

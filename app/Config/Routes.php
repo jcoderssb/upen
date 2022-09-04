@@ -33,6 +33,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('register', 'Register::index');
+
 // permohonan modul
 $routes->get('permohonan', 'Permohonan::index', ['as' => 'permohonan_index']);
 $routes->post('permohonan', 'Permohonan::save', ['as' => 'permohonan_save']);
