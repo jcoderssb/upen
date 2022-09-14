@@ -96,7 +96,9 @@
         </li>
 
         <li class="nav-item d-flex align-items-center">
-            <button type="button" class="btn btn-sm btn-secondary">Log Keluar</button>
+            <form action="<?= base_url('logout') ?>" method="post">
+                <button type="submit" class="btn btn-sm btn-secondary">Log Keluar</button>
+            </form>
         </li>
     </ul>
 </nav>

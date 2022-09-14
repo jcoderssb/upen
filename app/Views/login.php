@@ -12,6 +12,9 @@
 <head>
   <?php echo view('template/head-css') ?>
   <title>Login</title>
+
+  <!-- toastr -->
+  <link rel="stylesheet" href="<?= base_url('adminlte/plugins/toastr/toastr.min.css') ?>">
 </head>
 
 <body class="hold-transition login-page parallax-content" style="background-image: url(<?php echo baseURL ?>/img/perumahan/11.png)">
@@ -76,6 +79,16 @@
   </div>
 
   <?php echo view('template/foot-js') ?>
+
+  <!-- toastr -->
+  <script src="<?= base_url('adminlte/plugins/toastr/toastr.min.js') ?>"></script>
+
+  <script>
+    <?php if (session()->getFlashdata('success')) : ?>
+      toastr.success("<?= session()->getFlashdata('success') ?>")
+      <?php unset($_SESSION['success']); ?>
+    <?php endif ?>
+  </script>
 </body>
 
 </html>

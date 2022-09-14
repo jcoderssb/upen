@@ -10,7 +10,7 @@ class Login extends Controller
     public function index()
     {
         helper(['form']);
-        echo view('login');
+        return view('login');
     }
 
     public function auth()
@@ -32,7 +32,7 @@ class Login extends Controller
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/task');
+                return redirect()->to('/permohonan');
             } else {
                 $session->setFlashdata('msg', 'Password Incorrect');
                 return redirect()->to('/login');

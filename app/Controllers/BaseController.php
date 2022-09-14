@@ -9,6 +9,7 @@ use Psr\Log\LoggerInterface;
 
 use App\Models\PermohonanModel;
 use App\Models\TanggunganModel;
+use App\Models\UserModel;
 
 /**
  * Class BaseController
@@ -53,6 +54,7 @@ class BaseController extends Controller
 
 		$this->permohonanModel = new PermohonanModel();
 		$this->tanggunganModel = new TanggunganModel();
+		$this->userModel = new UserModel();
 		$this->session = \Config\Services::session();
 	}
 }

@@ -31,15 +31,26 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// landing page
 $routes->get('/', 'Home::index');
 
+// Login modul
+$routes->get('login', 'Login::index');
+$routes->post('logout', 'Login::logout');
+
+// Register modul
 $routes->get('register', 'Register::index');
+$routes->post('register', 'Register::save');
+
 
 // permohonan modul
-$routes->get('permohonan', 'Permohonan::index', ['as' => 'permohonan_index']);
-$routes->post('permohonan', 'Permohonan::save', ['as' => 'permohonan_save']);
-$routes->get('permohonan/daftar', 'Permohonan::create', ['as' => 'permohonan_create']);
-$routes->get('permohonan/(:any)', 'Permohonan::show/$1', ['as' => 'permohonan_show']);
+$routes->group("permohonan", ["filter" => "myauth"], function ($routes) {
+	$routes->get('', 'Permohonan::index');
+	$routes->post('', 'Permohonan::save');
+	$routes->get('daftar', 'Permohonan::create');
+	$routes->get('(:any)', 'Permohonan::show/$1');
+});
 
 
 /*
