@@ -49,6 +49,7 @@ $routes->group("permohonan", ["filter" => "myauth"], function ($routes) {
 	$routes->get('', 'Permohonan::index');
 	$routes->post('', 'Permohonan::save');
 	$routes->get('daftar', 'Permohonan::create');
+	$routes->get('mmk', 'Permohonan::mmk');
 	$routes->get('(:any)', 'Permohonan::show/$1');
 });
 

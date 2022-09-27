@@ -49,6 +49,12 @@ $uri = service('uri');
                                 <p>Daftar Permohonan</p>
                             </a>
                         </li>
+						<li class="nav-item">
+                            <a href="<?= base_url('permohonan/mmk') ?>" class="nav-link <?= uri_string() === 'permohonan/mmk' ? 'active' : '' ?>">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Senarai Status MMK</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">

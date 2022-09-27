@@ -10,6 +10,13 @@ class Permohonan extends BaseController
 
         return view('permohonan/index', compact('senaraiPermohonan'));
     }
+	
+	public function mmk()
+    {
+        $senaraiPermohonan = $this->permohonanModel->findAll();
+
+        return view('permohonan/mmk', compact('senaraiPermohonan'));
+    }
 
     public function create()
     {
@@ -53,4 +60,6 @@ class Permohonan extends BaseController
         session()->setFlashdata('success', 'Permohonan berjaya dihantar!');
         return redirect()->to('/permohonan');
     }
+	
+	
 }

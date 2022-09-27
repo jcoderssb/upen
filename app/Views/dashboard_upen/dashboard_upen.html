@@ -34,7 +34,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="<?= base_url('permohonan') ?>" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -81,7 +81,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="<?= base_url('permohonan') ?>" class="brand-link">
       <img src="<?php echo baseURL?>/img/perumahan/logoN9.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">UPEN</span>
     </a>
@@ -417,7 +417,7 @@
                     </p>
 
                     <div class="progress-group">
-                      Add Products to Cart
+                      Target Kutipan Mingguan
                       <span class="float-right"><b>160</b>/200</span>
                       <div class="progress progress-sm">
                         <div class="progress-bar bg-primary" style="width: 80%"></div>
@@ -426,7 +426,7 @@
                     <!-- /.progress-group -->
 
                     <div class="progress-group">
-                      Complete Purchase
+                      Target Kutipan Bulanan
                       <span class="float-right"><b>310</b>/400</span>
                       <div class="progress progress-sm">
                         <div class="progress-bar bg-danger" style="width: 75%"></div>
@@ -435,7 +435,7 @@
 
                     <!-- /.progress-group -->
                     <div class="progress-group">
-                      <span class="progress-text">Visit Premium Page</span>
+                      <span class="progress-text">Target Kutipan Tahunan</span>
                       <span class="float-right"><b>480</b>/800</span>
                       <div class="progress progress-sm">
                         <div class="progress-bar bg-success" style="width: 60%"></div>
@@ -444,7 +444,7 @@
 
                     <!-- /.progress-group -->
                     <div class="progress-group">
-                      Send Inquiries
+                      Penutupan Akaun
                       <span class="float-right"><b>250</b>/500</span>
                       <div class="progress progress-sm">
                         <div class="progress-bar bg-warning" style="width: 50%"></div>
@@ -692,7 +692,13 @@
     <!-- toastr -->
     <script src="<?= base_url('adminlte/plugins/toastr/toastr.min.js') ?>"></script>
 
+	<!-- ChartJS -->
+	<script src="<?= base_url('adminlte/plugins/chart.js/Chart.min.js') ?>"></script>
 
+	<!-- AdminLTE for demo purposes -->
+	<script src="<?= base_url('adminlte/dist/js/demo.js') ?>"></script>
+	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+	<script src="<?= base_url('adminlte/dist/js/pages/dashboard2.js') ?>"></script>
 <script>
  
  var pieChartCanvas = document.getElementById("pieChart1").getContext('2d')

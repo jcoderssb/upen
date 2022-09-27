@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Kutipan</h1>
+                <h1 class="m-0">Status MMK</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Kutipan</li>
+                    <li class="breadcrumb-item active">Status MMK</li>
                 </ol>
             </div>
         </div>
@@ -25,13 +25,9 @@
                     <header class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <h3 class="card-title">
-                                Senarai Kutipan
+                                Senarai Status MMK
                             </h3>
                             <div>
-                                <a href="<?= base_url('kutipan/daftar') ?>" class="btn btn-sm btn-success">
-                                    <i class="fas fa-plus"></i>
-                                    Daftar
-                                </a>
                             </div>
                         </div>
                     </header>
@@ -43,9 +39,9 @@
                                         <th>ID</th>
                                         <th>No. KP</th>
                                         <th>Nama Pemohon</th>
-                                        <th>Status Kutipan</th>
+                                        <th>Status MMK</th>
                                         <th>Dihantar Pada</th>
-                                        <th data-orderable="false" data-searchable="false"></th>
+                                        <th>Status Keputusan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,8 +52,10 @@
                                             <td><?= $permohonan['nama_pemohon'] ?></td>
                                             <td>
                                                 <?php if ($permohonan['status'] == 1) : ?>
-                                                    <span class="badge badge-success">Telah Dibayar</span>
-                                                <?php endif ?>
+                                                    <span class="badge badge-success">Layak MMK</span>
+												<?php elseif ($permohonan['status'] == 2) : ?>
+													<span class="badge badge-success">Berjaya</span>
+												<?php endif ?>
                                             </td>
                                             <td><?= date('d/m/Y', $permohonan['created_at']) ?></td>
                                             <td class="d-flex justify-content-center">
@@ -76,7 +74,7 @@
 						<div class="modal-dialog modal-xl">
 							<div class="modal-content">
 								<div class="text-center bg-info p-3">
-									<h4 class="modal-title text-white" id="info-header-modalLabel">Kutipan</h4>
+									<h4 class="modal-title text-white" id="info-header-modalLabel">Status Keputusan MMK</h4>
 								</div>
 								<div class="modal-body">
 									<form id="edit-form" class="pl-3 pr-3">
@@ -86,23 +84,23 @@
 										<div class="row">
 											<div class="col-md-4">
 												<div class="form-group">
-													<label for="module"> No Rujukan Modul Perakaunan: </label>
+													<label for="module"> No Rujukan Permohonan: </label>
 													<input type="text" id="module" name="module" class="form-control" maxlength="255" value="" >
 												</div>
 											</div>
 											<div class="col-md-4">
 												<div class="form-group">
-													<label for="dateDue"> Tarikh Akhir Bayaran: </label>
+													<label for="dateDue"> Tarikh Mesyuarat: </label>
 													<input type="date" id="dateDue" name="dateDue" class="form-control" dateISO="true" value="">
 												</div>
 											</div>
 											<div class="col-md-4">
 												<div class="form-group">
-													<label for="task_status"> Status Kutipan: </label>
+													<label for="task_status"> Status Keputusan: </label>
 													<select id="task_status" name="task_status" class="custom-select" >
-														<option value="4">Belum Dibayar</option>
-														<option value="1">Telah Dibayar</option>
-														<option value="2">Dalam Proses</option>
+														<option value="4">Layak MMK</option>
+														<option value="4">Berjaya</option>
+														<option value="1">Tidak Berjaya</option>
 													</select>
 												</div>
 											</div>
