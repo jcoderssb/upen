@@ -57,7 +57,9 @@
                                             <td>
                                                 <?php if ($permohonan['status'] == 1) : ?>
                                                     <span class="badge badge-warning">Sedang Diproses</span>
-                                                <?php endif ?>
+                                                <?php elseif ($permohonan['status'] == 2) : ?>
+													<span class="badge badge-success">Berjaya</span>
+												<?php endif ?>
                                             </td>
                                             <td><?= date('d/m/Y', $permohonan['created_at']) ?></td>
                                             <td class="d-flex justify-content-center">

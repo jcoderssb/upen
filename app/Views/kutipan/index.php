@@ -57,7 +57,9 @@
                                             <td>
                                                 <?php if ($permohonan['status'] == 1) : ?>
                                                     <span class="badge badge-success">Telah Dibayar</span>
-                                                <?php endif ?>
+                                                <?php elseif ($permohonan['status'] == 2) : ?>
+													<span class="badge badge-warning">Belum Dibayar</span>
+												<?php endif ?>
                                             </td>
                                             <td><?= date('d/m/Y', $permohonan['created_at']) ?></td>
                                             <td class="d-flex justify-content-center">

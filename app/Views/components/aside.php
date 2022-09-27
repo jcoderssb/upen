@@ -72,10 +72,16 @@ $uri = service('uri');
                                 <p>Senarai Kutipan</p>
                             </a>
                         </li>
+						 <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Pemulangan Deposit</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Daftar Kutipan</p>
+                                <p>Cetakan Resit</p>
                             </a>
                         </li>
                     </ul>
@@ -96,9 +102,9 @@ $uri = service('uri');
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="https://teyadashawty.bukku.my/dashboard" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Daftar Perakaunan</p>
+                                <p>Modul Perakaunan</p>
                             </a>
                         </li>
                     </ul>
