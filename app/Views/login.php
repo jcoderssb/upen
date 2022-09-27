@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="<?= base_url('adminlte/plugins/toastr/toastr.min.css') ?>">
 </head>
 
-<body class="hold-transition login-page parallax-content" style="background-image: url(<?php echo baseURL ?>/img/perumahan/11.png)">
+<body class="hold-transition login-page parallax-content" style="background-image: url(<?php echo baseURL ?>/img/perumahan/main.jpg)">
   <div class="">
     <div class="login-box shadow">
       <!-- /.login-logo -->
@@ -26,13 +26,13 @@
           <a href="/home" class="h1" style="hover: #32d200;"><b>UPEN</b></a>
         </div>
         <div class="card-body">
-          <p class="login-box-msg">Sign in to start your session</p>
+          <p class="login-box-msg">Daftar Masuk</p>
           <?php if (session()->getFlashdata('msg')) : ?>
             <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
           <?php endif; ?>
           <form action="/login/auth" method="post">
             <div class="input-group mb-3">
-              <input type="email" class="form-control" name="email" placeholder="Email" value="<?= set_value('email') ?>" required>
+              <input type="email" class="form-control" name="email" placeholder="Emel" value="<?= set_value('email') ?>" required>
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-envelope"></span>
@@ -40,7 +40,7 @@
               </div>
             </div>
             <div class="input-group mb-3">
-              <input type="password" name="password" class="form-control" placeholder="Password" value="<?= set_value('password') ?>" required>
+              <input type="password" name="password" class="form-control" placeholder="Katalaluan" value="<?= set_value('password') ?>" required>
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-lock"></span>
@@ -61,14 +61,14 @@
               </div> -->
 
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                <button type="submit" class="btn btn-primary btn-block">Log Masuk</button>
               </div>
             </div>
             <!-- /.col -->
           </form>
 
           <div class="text-center">
-            Don't have an account?<a href="register"> Start here.</a>
+            Pengguna Baru?<a href="register"> Daftar Pengguna.</a>
           </div>
         </div>
         <!-- /.card-body -->

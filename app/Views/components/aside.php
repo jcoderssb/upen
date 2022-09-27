@@ -61,7 +61,7 @@ $uri = service('uri');
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('kutipan') ?>" class="nav-link <?= uri_string() === 'kutipan' ? 'active' : '' ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Senarai Kutipan</p>
                             </a>
