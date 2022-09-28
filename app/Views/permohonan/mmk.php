@@ -51,10 +51,12 @@
                                             <td><?= $permohonan['nokp_pemohon'] ?></td>
                                             <td><?= $permohonan['nama_pemohon'] ?></td>
                                             <td>
-                                                <?php if ($permohonan['status'] == 1) : ?>
+                                                <?php if ($permohonan['status'] == 0) : ?>
                                                     <span class="badge badge-success">Layak MMK</span>
-												<?php elseif ($permohonan['status'] == 2) : ?>
+												<?php elseif ($permohonan['status'] == 1) : ?>
 													<span class="badge badge-success">Berjaya</span>
+												<?php elseif ($permohonan['status'] == 2) : ?>
+												<span class="badge badge-success">Berjaya</span>
 												<?php endif ?>
                                             </td>
                                             <td><?= date('d/m/Y', $permohonan['created_at']) ?></td>
@@ -98,9 +100,9 @@
 												<div class="form-group">
 													<label for="task_status"> Status Keputusan: </label>
 													<select id="task_status" name="task_status" class="custom-select" >
-														<option value="4">Layak MMK</option>
-														<option value="4">Berjaya</option>
-														<option value="1">Tidak Berjaya</option>
+														<option value="0">Layak MMK</option>
+														<option value="1">Berjaya</option>
+														<option value="2">Tidak Berjaya</option>
 													</select>
 												</div>
 											</div>
