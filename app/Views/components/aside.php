@@ -164,7 +164,7 @@ $uri = service('uri');
                 <?php if (session()->get("peranan") == 2) : ?>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-folder"></i>
+                            <i class="nav-icon fas fa-edit"></i>
                             <p>
                                 Kutipan
                                 <i class="fas fa-angle-left right"></i>
@@ -172,7 +172,7 @@ $uri = service('uri');
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="<?= base_url('kutipan') ?>" class="nav-link <?= uri_string() === 'kutipan' ? 'active' : '' ?>">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Senarai Kutipan</p>
                                 </a>
@@ -180,14 +180,20 @@ $uri = service('uri');
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Daftar Kutipan</p>
+                                    <p>Pemulangan Deposit</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Cetakan Resit</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-folder"></i>
+                            <i class="nav-icon fas fa-file-invoice-dollar"></i>
                             <p>
                                 Perakaunan
                                 <i class="fas fa-angle-left right"></i>
@@ -201,9 +207,9 @@ $uri = service('uri');
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="https://teyadashawty.bukku.my/dashboard" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Daftar Perakaunan</p>
+                                    <p>Modul Perakaunan</p>
                                 </a>
                             </li>
                         </ul>
