@@ -24,7 +24,7 @@ $uri = service('uri');
                 <!-- admin -->
                 <?php if (session()->get("peranan") == 1) : ?>
                     <li class="nav-item">
-                        <a href="<?= base_url('dashboard') ?>" class="nav-link <?= $uri->getSegment(1) === 'dashboard' ? 'active' : '' ?>">
+                        <a href="<?= base_url('dashboard') ?>" class="nav-link ">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>Dashboard</p>
                         </a>
@@ -45,37 +45,6 @@ $uri = service('uri');
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-chart-line"></i>
-                            <p>Statistik & Laporan</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a href="<?= base_url('audit_trails') ?>" class="nav-link <?= $uri->getSegment(1) === 'audit_trails' ? 'active' : '' ?>">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>Jejak Audit</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>Pengurusan pengumuman/aktiviti BP</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>Kemasukan Kod Kewangan</p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="<?= base_url('dashboard') ?>" class="nav-link <?= $uri->getSegment(1) === 'dashboard' ? 'active' : '' ?>">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>Dashboard</p>
-                        </a>
                     </li>
                     <li class="nav-item <?= $uri->getSegment(1) === 'permohonan' ? 'menu-open' : '' ?>">
                         <a href="#" class="nav-link <?= $uri->getSegment(1) === 'permohonan' ? 'active' : '' ?>">
@@ -108,7 +77,7 @@ $uri = service('uri');
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-folder"></i>
+                            <i class="nav-icon fas fa-edit"></i>
                             <p>
                                 Kutipan
                                 <i class="fas fa-angle-left right"></i>
@@ -137,7 +106,7 @@ $uri = service('uri');
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-folder"></i>
+                            <i class="nav-icon fas fa-file-invoice-dollar"></i>
                             <p>
                                 Perakaunan
                                 <i class="fas fa-angle-left right"></i>
@@ -160,30 +129,32 @@ $uri = service('uri');
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-folder"></i>
-                            <p>
-                                Pentadbir
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
+                            <i class="nav-icon fas fa-chart-line"></i>
+                            <p>Statistik & Laporan</p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Senarai Pentadbir</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Daftar Pentadbir</p>
-                                </a>
-                            </li>
-                        </ul>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="<?= base_url('audit_trails') ?>" class="nav-link <?= $uri->getSegment(1) === 'audit_trails' ? 'active' : '' ?>">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>Jejak Audit</p>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <i class="nav-icon fas fa-table"></i>
+                            <p>Pengurusan pengumuman/aktiviti BP</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-wallet"></i>
+                            <p>Kemasukan Kod Kewangan</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-tools"></i>
                             <p>Penyelenggaraan Kod Sistem</p>
                         </a>
                     </li>
