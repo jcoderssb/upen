@@ -44,6 +44,7 @@
                                         <th>No. KP</th>
                                         <th>Nama Pemohon</th>
                                         <th>Status Kutipan</th>
+                                        <th>Jenis Kutipan</th>
                                         <th>Dihantar Pada</th>
                                         <th data-orderable="false" data-searchable="false"></th>
                                     </tr>
@@ -55,12 +56,15 @@
                                             <td><?= $permohonan['nokp_pemohon'] ?></td>
                                             <td><?= $permohonan['nama_pemohon'] ?></td>
                                             <td>
-                                                <?php if ($permohonan['status'] == 1) : ?>
+												<?php if ($permohonan['status'] == 0) : ?>
+                                                    <span class="badge badge-info">Tiada Maklumat</span>
+                                                <?php elseif ($permohonan['status'] == 1) : ?>
                                                     <span class="badge badge-success">Telah Dibayar</span>
                                                 <?php elseif ($permohonan['status'] == 2) : ?>
 													<span class="badge badge-warning">Belum Dibayar</span>
 												<?php endif ?>
                                             </td>
+                                            <td>Kutipan Luar</td>
                                             <td><?= date('d/m/Y', $permohonan['created_at']) ?></td>
                                             <td class="d-flex justify-content-center">
                                                 <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-modal">
@@ -102,9 +106,20 @@
 												<div class="form-group">
 													<label for="task_status"> Status Kutipan: </label>
 													<select id="task_status" name="task_status" class="custom-select" >
-														<option value="4">Belum Dibayar</option>
-														<option value="1">Telah Dibayar</option>
-														<option value="2">Dalam Proses</option>
+														<option value="0">Dalam Proses</option>
+														<option value="1">Belum Dibayar</option>
+														<option value="2">Telah Dibayar</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+										<div class="col-md-4">
+												<div class="form-group">
+													<label for="task_status"> Jenis Kutipan: </label>
+													<select id="task_status" name="task_status" class="custom-select" >
+														<option value="0">Kutipan Luar (offline)</option>
+														<option value="1">Kutipan (online)</option>
 													</select>
 												</div>
 											</div>
