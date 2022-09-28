@@ -40,7 +40,7 @@
                             <table id="table" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Bil</th>
                                         <th>No. KP</th>
                                         <th>Nama Pemohon</th>
                                         <th>Status Permohonan</th>
@@ -51,7 +51,7 @@
                                 <tbody>
                                     <?php foreach ($senaraiPermohonan as $permohonan) : ?>
                                         <tr>
-                                            <td><?= $permohonan['id'] ?></td>
+                                            <td></td>
                                             <td><?= $permohonan['nokp_pemohon'] ?></td>
                                             <td><?= $permohonan['nama_pemohon'] ?></td>
                                             <td>
@@ -93,9 +93,19 @@
         "autoWidth": false,
         "responsive": true,
         "order": [
-            [0, 'desc']
+            [1, 'desc']
         ]
     });
+    table.on('order.dt search.dt', function() {
+        let i = 1;
+
+        table.cells(null, 0, {
+            search: 'applied',
+            order: 'applied'
+        }).every(function(cell) {
+            this.data(i++);
+        });
+    }).draw();
 
     <?php if (session()->getFlashdata('success')) : ?>
         toastr.success("<?= session()->getFlashdata('success') ?>")

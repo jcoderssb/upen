@@ -23,15 +23,6 @@ $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
 
-/*
- * --------------------------------------------------------------------
- * Route Definitions
- * --------------------------------------------------------------------
- */
-
-// We get a performance increase by specifying the default
-// route since we don't have to scan directories.
-
 // landing page
 $routes->get('/', 'Home::index');
 
@@ -43,6 +34,15 @@ $routes->post('logout', 'Login::logout');
 $routes->get('register', 'Register::index');
 $routes->post('register', 'Register::save');
 
+// user modul
+$routes->group("pengguna", ["filter" => "myauth"], function ($routes) {
+	$routes->get('', 'User::index');
+});
+
+// audit trail modul
+$routes->group("audit_trails", ["filter" => "myauth"], function ($routes) {
+	$routes->get('', 'AuditTrail::index');
+});
 
 // permohonan modul
 $routes->group("permohonan", ["filter" => "myauth"], function ($routes) {
@@ -52,6 +52,8 @@ $routes->group("permohonan", ["filter" => "myauth"], function ($routes) {
 	$routes->get('mmk', 'Permohonan::mmk');
 	$routes->get('(:any)', 'Permohonan::show/$1');
 });
+
+
 
 
 /*

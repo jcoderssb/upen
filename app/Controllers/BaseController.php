@@ -10,6 +10,10 @@ use Psr\Log\LoggerInterface;
 use App\Models\PermohonanModel;
 use App\Models\TanggunganModel;
 use App\Models\UserModel;
+use App\Models\UserTypeModel;
+use App\Models\AksesModel;
+use App\Models\PenggunaAksesModel;
+use App\Models\AuditTrailModel;
 
 /**
  * Class BaseController
@@ -54,7 +58,11 @@ class BaseController extends Controller
 
 		$this->permohonanModel = new PermohonanModel();
 		$this->tanggunganModel = new TanggunganModel();
+		$this->aksesModel = new AksesModel();
 		$this->userModel = new UserModel();
+		$this->userTypeModel = new UserTypeModel();
+		$this->penggunaAksesModel = new PenggunaAksesModel();
+		$this->auditTrailModel = new AuditTrailModel();
 		$this->session = \Config\Services::session();
 	}
 }

@@ -23,7 +23,7 @@
       <!-- /.login-logo -->
       <div class="card card-outline card-primary">
         <div class="card-header text-center">
-          <a href="/home" class="h1" style="hover: #32d200;"><b>UPEN</b></a>
+          <a href="/home" class="h1" style="hover: #32d200;"><b>ePENS</b></a>
         </div>
         <div class="card-body">
           <p class="login-box-msg">Daftar Masuk</p>

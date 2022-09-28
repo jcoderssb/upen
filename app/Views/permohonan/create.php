@@ -49,7 +49,7 @@
                                     <option value="" selected disabled>Pilih taraf perkahwinan</option>
                                     <option value="bujang">Bujang</option>
                                     <option value="berkahwin">Berkahwinan</option>
-                                    <option value="janda/duda">Janda/Duda</option>
+                                    <option value="janda/duda">Ibu Tunggal/Bapa Tunggal</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -168,7 +168,15 @@
             cols += '<td><input type="text" class="form-control" placeholder="Nama penuh" name="nama_tanggungan' + counter + '"/></td>';
             cols += '<td><input type="text" class="form-control" placeholder="kad pengenalan/sijil kelahiran" name="nokp_tanggungan' + counter + '"/></td>';
             cols += '<td><input type="text" class="form-control" placeholder="Umur" name="umur_tanggungan' + counter + '"/></td>';
-            cols += '<td><select name ="hubungan_tanggungan' + counter + '" class="form-control"><option value="" selected disabled>Hubungan</option><option value="anak">Anak Kandung</option><option value="penjaga">Penjaga</option></select></td>';
+            cols += `<td><select name ="hubungan_tanggungan' + counter + '" class="form-control">
+                            <option value="" selected disabled>Hubungan</option>
+                            <option value="anak">Anak Kandung</option>
+                            <option value="penjaga">Penjaga</option>
+                            <option value="ayah">Ayah</option>
+                            <option value="ibu">Ibu</option>
+                            <option value="datuk">Datuk</option>
+                            <option value="nenek">Nenek</option>
+                    </select></td>`;
             cols += '<td class="text-center"><button type="button" class="ibtnDel btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>';
             newRow.append(cols);
             $("table.order-list").append(newRow);

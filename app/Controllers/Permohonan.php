@@ -52,7 +52,9 @@ class Permohonan extends BaseController
                     'id_permohonan' => $id_permohonan,
                     'nama' => $this->request->getPost('nama_tanggungan' .  $i),
                     'nokp' => $this->request->getPost('nokp_tanggungan' . $i),
+                    'umur' => $this->request->getPost('umur_tanggungan' . $i),
                     'hubungan' => $this->request->getPost('hubungan_tanggungan' . $i),
+
                 ]);
             }
         }

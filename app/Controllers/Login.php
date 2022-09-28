@@ -28,6 +28,7 @@ class Login extends Controller
                 $ses_data = [
                     'id'       => $data['id'],
                     'username'     => $data['username'],
+                    'peranan' => $data['usertype'],
                     'email'    => $data['email'],
                     'logged_in'     => TRUE
                 ];
