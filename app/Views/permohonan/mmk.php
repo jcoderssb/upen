@@ -52,11 +52,11 @@
                                             <td><?= $permohonan['nama_pemohon'] ?></td>
                                             <td>
                                                 <?php if ($permohonan['status'] == 0) : ?>
-                                                    <span class="badge badge-success">Layak MMK</span>
+                                                    <span class="badge badge-info">Layak MMK</span>
 												<?php elseif ($permohonan['status'] == 1) : ?>
 													<span class="badge badge-success">Berjaya</span>
 												<?php elseif ($permohonan['status'] == 2) : ?>
-												<span class="badge badge-success">Tidak Berjaya</span>
+												<span class="badge badge-warning">Tidak Berjaya</span>
 												<?php endif ?>
                                             </td>
                                             <td><?= date('d/m/Y', $permohonan['created_at']) ?></td>
